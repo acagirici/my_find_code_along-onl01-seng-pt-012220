@@ -1,16 +1,15 @@
 require 'pry'
 
-	1. def my_all?(collection)
-	2. i = 0
-	3. block_return_values = []
-	4. while i < collection.length
-	5. block_return_values << yield(collection[i])
-	6. i = i + 1
-	7. end
-	8.  
-	9. if block_return_values.include?(false)
-	10. false
-	11. else
-	12. true
- end
+def my_all?(collection)
+	i = 0
+	block_return_values = []
+	  while i < collection.length
+	    block_return_values << yield(collection[i])
+	    i = i + 1
+	  end
+	    if block_return_values.include?(false)
+	      false
+	    else
+	      true
+      end
 end
